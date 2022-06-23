@@ -30,14 +30,16 @@ public static class ImageCropperTemplateCoreExtensions
         IImageUrlGenerator imageUrlGenerator,
         IPublishedValueFallback publishedValueFallback,
         IPublishedUrlProvider publishedUrlProvider,
-        UrlMode urlMode = UrlMode.Default) =>
+        UrlMode urlMode = UrlMode.Default,
+        string? furtherOptions = null) =>
         mediaItem.GetCropUrl(
             imageUrlGenerator,
             publishedValueFallback,
             publishedUrlProvider,
             cropAlias: cropAlias,
             useCropDimensions: true,
-            urlMode: urlMode);
+            urlMode: urlMode,
+            furtherOptions: furtherOptions);
 
     /// <summary>
     ///     Gets the underlying image processing service URL by the crop alias (from the "umbracoFile" property alias in the
@@ -58,14 +60,16 @@ public static class ImageCropperTemplateCoreExtensions
         IImageUrlGenerator imageUrlGenerator,
         IPublishedValueFallback publishedValueFallback,
         IPublishedUrlProvider publishedUrlProvider,
-        UrlMode urlMode = UrlMode.Default) =>
+        UrlMode urlMode = UrlMode.Default,
+        string? furtherOptions = null) =>
         mediaWithCrops.GetCropUrl(
             imageUrlGenerator,
             publishedValueFallback,
             publishedUrlProvider,
             cropAlias: cropAlias,
             useCropDimensions: true,
-            urlMode: urlMode);
+            urlMode: urlMode,
+            furtherOptions: furtherOptions);
 
     /// <summary>
     ///     Gets the crop URL by using only the specified <paramref name="imageCropperValue" />.
@@ -87,7 +91,8 @@ public static class ImageCropperTemplateCoreExtensions
         IImageUrlGenerator imageUrlGenerator,
         IPublishedValueFallback publishedValueFallback,
         IPublishedUrlProvider publishedUrlProvider,
-        UrlMode urlMode = UrlMode.Default) =>
+        UrlMode urlMode = UrlMode.Default,
+        string? furtherOptions = null) =>
         mediaItem.GetCropUrl(
             imageUrlGenerator,
             publishedValueFallback,
@@ -96,7 +101,8 @@ public static class ImageCropperTemplateCoreExtensions
             true,
             cropAlias: cropAlias,
             useCropDimensions: true,
-            urlMode: urlMode);
+            urlMode: urlMode,
+            furtherOptions: furtherOptions);
 
     /// <summary>
     ///     Gets the underlying image processing service URL by the crop alias using the specified property containing the
@@ -119,7 +125,8 @@ public static class ImageCropperTemplateCoreExtensions
         IImageUrlGenerator imageUrlGenerator,
         IPublishedValueFallback publishedValueFallback,
         IPublishedUrlProvider publishedUrlProvider,
-        UrlMode urlMode = UrlMode.Default) =>
+        UrlMode urlMode = UrlMode.Default,
+        string? furtherOptions = null) =>
         mediaItem.GetCropUrl(
             imageUrlGenerator,
             publishedValueFallback,
@@ -127,7 +134,8 @@ public static class ImageCropperTemplateCoreExtensions
             propertyAlias: propertyAlias,
             cropAlias: cropAlias,
             useCropDimensions: true,
-            urlMode: urlMode);
+            urlMode: urlMode,
+            furtherOptions: furtherOptions);
 
     /// <summary>
     ///     Gets the underlying image processing service URL by the crop alias using the specified property containing the
