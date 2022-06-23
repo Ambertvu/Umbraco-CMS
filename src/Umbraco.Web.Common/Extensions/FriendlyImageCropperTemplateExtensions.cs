@@ -27,6 +27,13 @@ public static class FriendlyImageCropperTemplateExtensions
     /// <param name="mediaItem">The IPublishedContent item.</param>
     /// <param name="cropAlias">The crop alias e.g. thumbnail.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -44,6 +51,13 @@ public static class FriendlyImageCropperTemplateExtensions
     /// <param name="mediaWithCrops">The MediaWithCrops item.</param>
     /// <param name="cropAlias">The crop alias e.g. thumbnail.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -57,6 +71,13 @@ public static class FriendlyImageCropperTemplateExtensions
     /// <param name="imageCropperValue">The image cropper value.</param>
     /// <param name="cropAlias">The crop alias.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The image crop URL.
     /// </returns>
@@ -76,6 +97,13 @@ public static class FriendlyImageCropperTemplateExtensions
     /// <param name="propertyAlias">The property alias of the property containing the JSON data e.g. umbracoFile.</param>
     /// <param name="cropAlias">The crop alias e.g. thumbnail.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -95,6 +123,13 @@ public static class FriendlyImageCropperTemplateExtensions
     /// <param name="propertyAlias">The property alias of the property containing the JSON data e.g. umbracoFile.</param>
     /// <param name="cropAlias">The crop alias e.g. thumbnail.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>

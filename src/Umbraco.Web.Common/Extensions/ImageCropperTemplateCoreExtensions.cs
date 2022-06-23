@@ -21,6 +21,13 @@ public static class ImageCropperTemplateCoreExtensions
     /// <param name="publishedValueFallback">The published value fallback.</param>
     /// <param name="publishedUrlProvider">The published URL provider.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -51,6 +58,13 @@ public static class ImageCropperTemplateCoreExtensions
     /// <param name="publishedValueFallback">The published value fallback.</param>
     /// <param name="publishedUrlProvider">The published URL provider.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -81,6 +95,13 @@ public static class ImageCropperTemplateCoreExtensions
     /// <param name="publishedValueFallback">The published value fallback.</param>
     /// <param name="publishedUrlProvider">The published URL provider.</param>
     /// <param name="urlMode">The url mode.s</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The image crop URL.
     /// </returns>
@@ -115,6 +136,13 @@ public static class ImageCropperTemplateCoreExtensions
     /// <param name="publishedValueFallback">The published value fallback.</param>
     /// <param name="publishedUrlProvider">The published URL provider.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -148,6 +176,13 @@ public static class ImageCropperTemplateCoreExtensions
     /// <param name="publishedValueFallback">The published value fallback.</param>
     /// <param name="publishedUrlProvider">The published URL provider.</param>
     /// <param name="urlMode">The url mode.</param>
+    /// <param name="furtherOptions">
+    ///     These are any query string parameters (formatted as query strings) that the underlying image processing service
+    ///     supports. For example:
+    ///     <example><![CDATA[
+    /// furtherOptions: "bgcolor=fff"
+    /// ]]></example>
+    /// </param>
     /// <returns>
     ///     The URL of the cropped image.
     /// </returns>
@@ -158,7 +193,8 @@ public static class ImageCropperTemplateCoreExtensions
         string propertyAlias,
         string cropAlias,
         IImageUrlGenerator imageUrlGenerator,
-        UrlMode urlMode = UrlMode.Default) =>
+        UrlMode urlMode = UrlMode.Default,
+        string? furtherOptions = null) =>
         mediaWithCrops.GetCropUrl(
             imageUrlGenerator,
             publishedValueFallback,
@@ -166,7 +202,8 @@ public static class ImageCropperTemplateCoreExtensions
             propertyAlias: propertyAlias,
             cropAlias: cropAlias,
             useCropDimensions: true,
-            urlMode: urlMode);
+            urlMode: urlMode,
+            furtherOptions: furtherOptions);
 
     /// <summary>
     ///     Gets the underlying image processing service URL from the IPublishedContent item.
